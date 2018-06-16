@@ -52,5 +52,28 @@ header {
 }
 .apresentacao {
     background-color: #f7d1d1;
-    height: 230px;
+    height: auto;
+}
+
+footer {
+    background: #a8afaf;
+    color: white;
+    padding: 2%;
+    display: flex;
+    justify-content: space-around;
+}
+.redes-sociais-itens {
+    float: right;
+    width: 100%;
+}
+.contato, .mapa-site, .redes-sociais, rodape {
+    color: #354058;
+}
+.rodape {
+    background-color: black;
+    color: #fff;
+}
+
+.rodape.container {
+    float: right;
 }
