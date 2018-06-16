@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 150px;
+    background-color: cadetblue;
+}
+
+.menu {
+    height: 20%;
+}
+.menu ul{
+    display: flex;
+    list-style-type: none;
+    width: 50%;
+}
+.menu ul a{
+    text-decoration: none;
+    color: #c2fdff;
+    font-size: 140%;
+    width: 100%;
+    text-align: center;
+    margin: 0 3%;
+}
+.menu ul a:hover{
+    background-color: white;
+    color: cadetblue;
+    font-size: 200%;
+}
+
+.container {
+    margin: 0 5%;
+    text-align: justify;
+}
+.container h2 {
+    width: auto;
+    margin: 2% 0;
+    position: relative;
+}
+.container p {
+    width: 50%;
+}
+
+.banner {
+    height: 80%;
+}
+
+.introducao {
+    height: auto;
+}
+.apresentacao {
+    background-color: #f7d1d1;
+    height: 230px;
+}
