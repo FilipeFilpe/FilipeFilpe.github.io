@@ -1,20 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
     height: 350px;
-    background-color: #242424;
+    background-color: #090909;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: #cbcbcb;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .title {
-    font-size: 250%;
+    font-size: 580%;
     text-align: center;
+    color: #cccccc;
 }
 
 .menu {
@@ -25,6 +31,7 @@ header {
     list-style-type: none;
     width: 50%;
     float: right;
+    margin-top: 1%;
 }
 .menu ul a {
     text-decoration: none;
@@ -34,9 +41,12 @@ header {
     text-align: center;
 }
 .menu ul a:hover{
-    background-color: #242424;
     color: #cbcbcb;
     font-size: 200%;
+    border-bottom: 1px solid #cccccc;
+    /* border-top: 1px solid #cccccc; */
+    background-image: linear-gradient(to bottom, #090909, #ffffff2b);
+}
 }
 
 .container {
