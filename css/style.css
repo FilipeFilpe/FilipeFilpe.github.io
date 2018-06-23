@@ -4,8 +4,17 @@
 }
 
 header {
-    height: 150px;
-    background-color: cadetblue;
+    height: 350px;
+    background-color: #242424;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #cbcbcb;
+
+}
+.title {
+    font-size: 250%;
+    text-align: center;
 }
 
 .menu {
@@ -15,18 +24,18 @@ header {
     display: flex;
     list-style-type: none;
     width: 50%;
+    float: right;
 }
-.menu ul a{
+.menu ul a {
     text-decoration: none;
-    color: #c2fdff;
+    color: #cbcbcb;
     font-size: 140%;
     width: 100%;
     text-align: center;
-    margin: 0 3%;
 }
 .menu ul a:hover{
-    background-color: white;
-    color: cadetblue;
+    background-color: #242424;
+    color: #cbcbcb;
     font-size: 200%;
 }
 
@@ -49,6 +58,9 @@ header {
 
 .introducao {
     height: auto;
+}
+.intro-cont {
+    display: flex;
 }
 .apresentacao {
     background-color: #f7d1d1;
