@@ -7,20 +7,31 @@
 }
 
 header {
-    height: 350px;
-    background-color: #090909;
+    height: auto;
+    background-color: #020202;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
     color: #cbcbcb;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
+
+.imagem-header {
+    text-align: center;
+    padding: 2% 0;
+}
+.imagem-header img {
+    background-size: cover;
+    width: 50%;
+    height: auto;
+}
+
 .title {
-    font-size: 580%;
+    font-size: 430%;
     text-align: center;
     color: #cccccc;
+    padding-top: 2%;
 }
 
 .menu {
@@ -39,13 +50,15 @@ header {
     font-size: 140%;
     width: 100%;
     text-align: center;
+    border-bottom: 2px solid transparent;
 }
 .menu ul a:hover{
     color: #cbcbcb;
-    font-size: 200%;
-    border-bottom: 1px solid #cccccc;
+    /* font-size: 200%; */
+    border-bottom: 2px solid #FFEB3B;
     /* border-top: 1px solid #cccccc; */
-    background-image: linear-gradient(to bottom, #090909, #ffffff2b);
+    background-image: linear-gradient(to bottom, #090909, #ffeb3b1a);
+    font-weight: bold;
 }
 
 .container {
@@ -77,18 +90,18 @@ header {
 }
 
 footer {
-    background: #a8afaf;
     color: white;
     padding: 2%;
     display: flex;
     justify-content: space-around;
+    background: #222222;
 }
 .redes-sociais-itens {
     float: right;
     width: 100%;
 }
 .contato, .mapa-site, .redes-sociais, rodape {
-    color: #354058;
+    color: #ffffff;
 }
 .rodape {
     background-color: black;
