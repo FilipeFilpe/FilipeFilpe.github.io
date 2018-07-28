@@ -19,9 +19,29 @@ header {
     border-bottom: 2px solid blue;
 }
 
+a {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    color: white;
+}
+a:hover {
+    color: lightgreen;
+    border-bottom: 1px solid green;
+    font-weight: bold;
+}
+
+.me {
+    text-align: center;
+    padding: 5% 0 1% 0;
+}
+.me img {
+    border: 2px solid red;
+    border-radius: 50%;
+    width: 20%;
+}
+
 .imagem-header {
     text-align: center;
-    padding: 2% 0;
 }
 .imagem-header img {
     background-size: cover;
@@ -29,24 +49,24 @@ header {
     height: auto;
 }
 
-.title {
-    font-size: 430%;
+.title, .subtitle {
+    /* font-size: 430%; */
     text-align: center;
     color: #cccccc;
-    padding-top: 2%;
+    /* padding-top: 2%; */
 }
 
-.menu {
+.meu-menu {
     height: 20%;
 }
-.menu ul{
+.meu-menu ul{
     display: flex;
     list-style-type: none;
     width: 50%;
     float: right;
     margin-top: 1%;
 }
-.menu ul a {
+.meu-menu ul a {
     text-decoration: none;
     color: #cbcbcb;
     font-size: 140%;
@@ -54,13 +74,14 @@ header {
     text-align: center;
     border-bottom: 2px solid transparent;
 }
-.menu ul a:hover{
+.meu-menu ul a:hover{
     color: #cbcbcb;
     /* font-size: 200%; */
     border-bottom: 2px solid #FFEB3B;
     /* border-top: 1px solid #cccccc; */
     background-image: linear-gradient(to bottom, #090909, #ffeb3b1a);
     font-weight: bold;
+    background-color: transparent;
 }
 
 .container {
@@ -78,6 +99,10 @@ header {
 
 .banner {
     height: 80%;
+}
+
+.img-principal img {
+    width: 50%;
 }
 
 .introducao {
@@ -101,6 +126,11 @@ footer {
 .redes-sociais-itens {
     float: right;
     width: 100%;
+    margin-top: 5%;
+    text-align: center;
+}
+footer h3{
+    font-weight: bold;
 }
 .contato, .mapa-site, .redes-sociais, rodape {
     color: #ffffff;
