@@ -36,17 +36,18 @@ header {
       background-size: cover;
       width: 50%;
       height: auto; }
+@media(max-width: 768px) {
+  header .imagem-header img {
+    width: 70%; } }
   header .me {
     margin-top: 68px;
     text-align: center;
     padding: 5% 0 1% 0; }
-    header .me .title, header .me .subtitle {
-      text-align: center;
-      color: #cccccc; }
-    header .me img {
-      border: 2px solid red;
-      border-radius: 50%;
-      width: 20%; }
+    header .me .container {
+      max-width: 800px; }
+      header .me .container .title, header .me .container .subtitle {
+        text-align: center;
+        color: #cccccc; }
 
 main {
   color: #cacaca;
@@ -90,17 +91,32 @@ main {
         height: 300px;
         margin: 15px; }
     main #portfolio .modal-dialog {
-      width: 75%; }
-    main #portfolio .modal-content {
-      background-color: #ffffff;
-      color: #183a40; }
-      main #portfolio .modal-content .modal-body {
-        text-align: justify; }
-      main #portfolio .modal-content .box-items {
-        width: 100%;
-        height: 500px;
-        background-color: #F1F8F8;
-        display: flex; }
+      max-width: 800px;
+      max-height: 500px; }
+      main #portfolio .modal-dialog .modal-content {
+        background-color: #ffffff;
+        color: #183a40; }
+        main #portfolio .modal-dialog .modal-content .modal-body {
+          text-align: justify; }
+        main #portfolio .modal-dialog .modal-content .box-items {
+          width: 100%;
+          background-color: #F1F8F8;
+          display: flex;
+          overflow: hidden; }
+          main #portfolio .modal-dialog .modal-content .box-items div:first-child {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            main #portfolio .modal-dialog .modal-content .box-items div:first-child img {
+              width: 250px; }
+          main #portfolio .modal-dialog .modal-content .box-items .detalhes {
+            padding: 15px; }
+            main #portfolio .modal-dialog .modal-content .box-items .detalhes li {
+              margin-left: 10px;
+              list-style: none; }
+          main #portfolio .modal-dialog .modal-content .box-items .detalhes, main #portfolio .modal-dialog .modal-content .box-items h2, main #portfolio .modal-dialog .modal-content .box-items h4 {
+            color: #222222;
+            font-weight: bolder; }
   main #blog {
     background: rgba(72, 77, 83, 0.85);
     padding: 5% 0; }
@@ -122,6 +138,8 @@ main {
         color: #222222;
         font-weight: bolder;
         font-style: italic; }
+      main #blog .card-group h5 {
+        text-align: center; }
 
 footer {
   color: white;
@@ -137,7 +155,15 @@ footer {
     float: right;
     width: 100%;
     margin-top: 5%;
-    text-align: center; }
+    text-align: center;
+    display: flex;
+    flex-direction: column; }
+    footer .redes-sociais-itens a {
+      margin: 3px; }
+      footer .redes-sociais-itens a svg {
+        font-size: 25px; }
+    footer .redes-sociais-itens a:hover {
+      text-decoration: none; }
 
 .rodape {
   background-color: black;
