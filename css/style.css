@@ -1,145 +1,148 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:100');
-
+@import url("https://fonts.googleapis.com/css?family=Raleway:100");
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-}
-
-header {
-    height: auto;
-    background-color: #020202;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    color: #cbcbcb;
-    display: flex;
-    flex-direction: column;
-    border-top: 2px solid yellow;
-    border-bottom: 2px solid blue;
-}
-
-a {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif; }
+  * a {
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    color: white;
-}
-a:hover {
+    color: white; }
+  * a:hover {
     color: lightgreen;
     border-bottom: 1px solid green;
-    font-weight: bold;
-}
+    font-weight: bold; }
 
-.me {
-    text-align: center;
-    padding: 5% 0 1% 0;
-}
-.me img {
-    border: 2px solid red;
-    border-radius: 50%;
-    width: 20%;
-}
-
-.imagem-header {
-    text-align: center;
-}
-.imagem-header img {
-    background-size: cover;
-    width: 50%;
-    height: auto;
-}
-
-.title, .subtitle {
-    /* font-size: 430%; */
-    text-align: center;
-    color: #cccccc;
-    /* padding-top: 2%; */
-}
-
-.meu-menu {
-    height: 20%;
-}
-.meu-menu ul{
-    display: flex;
-    list-style-type: none;
-    width: 50%;
-    float: right;
-    margin-top: 1%;
-}
-.meu-menu ul a {
-    text-decoration: none;
-    color: #cbcbcb;
-    font-size: 140%;
+header {
+  height: auto;
+  background-color: #020202;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #cbcbcb;
+  display: flex;
+  flex-direction: column; }
+  header nav.navbar {
+    border-top: 2px solid #c1ad43;
+    border-bottom: 2px solid #51a0e9;
+    position: fixed;
     width: 100%;
+    z-index: 2; }
+    header nav.navbar .logo {
+      width: 50px;
+      height: 50px; }
+  header .imagem-header {
+    text-align: center; }
+    header .imagem-header img {
+      background-size: cover;
+      width: 50%;
+      height: auto; }
+  header .me {
+    margin-top: 68px;
     text-align: center;
-    border-bottom: 2px solid transparent;
-}
-.meu-menu ul a:hover{
-    color: #cbcbcb;
-    /* font-size: 200%; */
-    border-bottom: 2px solid #FFEB3B;
-    /* border-top: 1px solid #cccccc; */
-    background-image: linear-gradient(to bottom, #090909, #ffeb3b1a);
-    font-weight: bold;
-    background-color: transparent;
-}
+    padding: 5% 0 1% 0; }
+    header .me .title, header .me .subtitle {
+      text-align: center;
+      color: #cccccc; }
+    header .me img {
+      border: 2px solid red;
+      border-radius: 50%;
+      width: 20%; }
 
-.container {
-    margin: 0 5%;
-    text-align: justify;
-}
-.container h2 {
-    width: auto;
-    margin: 2% 0;
-    position: relative;
-}
-.container p {
-    width: 50%;
-}
-
-.banner {
-    height: 80%;
-}
-
-.img-principal img {
-    width: 50%;
-}
-
-.introducao {
-    height: auto;
-}
-.intro-cont {
-    display: flex;
-}
-.apresentacao {
-    background-color: #f7d1d1;
-    height: auto;
-}
+main {
+  color: #cacaca;
+  border-top: 2px solid #6bb54a;
+  border-bottom: 2px solid #51a0e9; }
+  main .titulo {
+    text-align: center; }
+  main #sobre {
+    background: #343a40; }
+    main #sobre .container {
+      margin: 0 5%;
+      text-align: justify; }
+      main #sobre .container h2 {
+        width: auto;
+        margin: 2% 0; }
+    main #sobre .content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      main #sobre .content .content-intern {
+        padding: 15px;
+        max-width: 500px; }
+        main #sobre .content .content-intern h3 {
+          text-align: center; }
+      main #sobre .content .img-fluid {
+        max-width: 300px; }
+  main #portfolio {
+    background: #484d53;
+    text-align: center;
+    padding: 5% 0; }
+    main #portfolio .itens-portfolio {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%; }
+      main #portfolio .itens-portfolio .item-portfolio {
+        width: 260px;
+        cursor: pointer;
+        overflow: hidden;
+        height: 300px;
+        margin: 15px; }
+    main #portfolio .modal-dialog {
+      width: 75%; }
+    main #portfolio .modal-content {
+      background-color: #ffffff;
+      color: #183a40; }
+      main #portfolio .modal-content .modal-body {
+        text-align: justify; }
+      main #portfolio .modal-content .box-items {
+        width: 100%;
+        height: 500px;
+        background-color: #F1F8F8;
+        display: flex; }
+  main #blog {
+    background: rgba(72, 77, 83, 0.85);
+    padding: 5% 0; }
+    main #blog .card-group {
+      justify-content: center; }
+      main #blog .card-group .card {
+        width: 350px;
+        padding: 15px;
+        margin: 15px;
+        flex: unset; }
+        main #blog .card-group .card img {
+          border-radius: 10px; }
+        main #blog .card-group .card .card-body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-end; }
+      main #blog .card-group .card, main #blog .card-group h5 {
+        color: #222222;
+        font-weight: bolder;
+        font-style: italic; }
 
 footer {
-    color: white;
-    padding: 2%;
-    display: flex;
-    justify-content: space-around;
-    background: #222222;
-}
-.redes-sociais-itens {
+  color: white;
+  padding: 2%;
+  display: flex;
+  justify-content: space-around;
+  background: #222222; }
+  footer h3 {
+    font-weight: bold; }
+  footer .contato, footer .mapa-site, footer .redes-sociais, footer rodape {
+    color: #ffffff; }
+  footer .redes-sociais-itens {
     float: right;
     width: 100%;
     margin-top: 5%;
-    text-align: center;
-}
-footer h3{
-    font-weight: bold;
-}
-.contato, .mapa-site, .redes-sociais, rodape {
-    color: #ffffff;
-}
-.rodape {
-    background-color: black;
-    color: #fff;
-}
+    text-align: center; }
 
-.rodape.container {
-    float: right;
-}
+.rodape {
+  background-color: black;
+  color: #fff; }
+  .rodape .rodape.container {
+    float: right; }
+
+/*# sourceMappingURL=style.css.map */
