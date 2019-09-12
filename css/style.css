@@ -232,7 +232,7 @@ main #blog .card-group {
 }
 
 main #blog .card-group .card {
-  width: 350px;
+  max-width: 350px;
   padding: 15px;
   margin: 15px;
   -webkit-box-flex: unset;
@@ -278,6 +278,8 @@ footer {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   background: #222222;
 }
 
@@ -285,14 +287,16 @@ footer h3 {
   font-weight: bold;
 }
 
-footer .contato, footer .mapa-site, footer .redes-sociais, footer rodape {
-  color: #ffffff;
+footer > div {
+  margin: 15px;
 }
 
-footer .redes-sociais-itens {
-  float: right;
-  width: 100%;
-  margin-top: 5%;
+footer > div:not(.redes-sociais) {
+  color: #ffffff;
+  min-width: 150px;
+}
+
+footer .redes-sociais {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -303,15 +307,24 @@ footer .redes-sociais-itens {
           flex-direction: column;
 }
 
-footer .redes-sociais-itens a {
-  margin: 3px;
+footer .redes-sociais .redes-sociais-itens {
+  float: right;
+  margin-top: 5%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-footer .redes-sociais-itens a svg {
-  font-size: 25px;
+footer .redes-sociais .redes-sociais-itens a {
+  margin: 10px;
 }
 
-footer .redes-sociais-itens a:hover {
+footer .redes-sociais .redes-sociais-itens a svg {
+  font-size: 30px;
+}
+
+footer .redes-sociais .redes-sociais-itens a:hover {
   text-decoration: none;
 }
 

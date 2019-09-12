@@ -134,7 +134,7 @@ main
         .card-group 
             justify-content: center           
             .card,
-                width: 350px
+                max-width: 350px
                 padding: 15px
                 margin: 15px
                 flex: unset
@@ -157,24 +157,30 @@ footer
     padding: 2%
     display: flex
     justify-content: space-around
+    flex-wrap: wrap
     background: #222222
     h3
         font-weight: bold
-    .contato, .mapa-site, .redes-sociais, rodape 
+    > div
+        margin: 15px
+    > div:not(.redes-sociais)
         color: #ffffff
-    .redes-sociais-itens 
-        float: right
-        width: 100%
-        margin-top: 5%
+        min-width: 150px
+    .redes-sociais
         text-align: center
         display: flex
         flex-direction: column
-        a
-            margin: 3px
-            svg
-                font-size: 25px
-        a:hover
-            text-decoration: none
+        .redes-sociais-itens
+            float: right
+            margin-top: 5%
+            text-align: center
+            display: flex
+            a
+                margin: 10px
+                svg
+                    font-size: 30px
+            a:hover
+                text-decoration: none
 
 .rodape 
     background-color: black
