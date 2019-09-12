@@ -1,7 +1,9 @@
 # FilipeFilpe.github.io
 
 Site desenvolvido para divulgação dos meus trabalhos e coisas de meu interesse.
-####[Confira o site no ar](https://filipefilpe.github.io)
+
+[Confira o site no ar](https://filipefilpe.github.io)
+
 ![Print do Site](/img/pessoal_compress.png)
 
 ## Detalhes Técnicos
