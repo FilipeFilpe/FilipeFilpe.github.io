@@ -32,7 +32,9 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@fil
         posts.forEach((item) => {
             output += `
             <div class="card" >
-                <img src="${item.thumbnail}" class="card-img-top">
+                <div class="card-img">
+                    <img src="${item.thumbnail}" class="card-img-top">
+                </div>
                 <div class="card-body">
                     <h5 class="card-title">${item.title}</h5>
                     <div class="blog__info">
@@ -44,5 +46,5 @@ fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@fil
                 </div>
             </div>`
         });
-        document.querySelector('.card-group').innerHTML = output;
+        document.querySelector('.posts-medium').innerHTML = output;
     })

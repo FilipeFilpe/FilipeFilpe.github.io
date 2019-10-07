@@ -225,13 +225,16 @@ main #blog {
   padding: 5% 0;
 }
 
-main #blog .card-group {
+main #blog .posts-medium {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-main #blog .card-group .card {
+main #blog .posts-medium .card {
   max-width: 350px;
   padding: 15px;
   margin: 15px;
@@ -240,11 +243,7 @@ main #blog .card-group .card {
           flex: unset;
 }
 
-main #blog .card-group .card img {
-  border-radius: 10px;
-}
-
-main #blog .card-group .card .card-body {
+main #blog .posts-medium .card .card-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -258,15 +257,37 @@ main #blog .card-group .card .card-body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
 }
 
-main #blog .card-group .card, main #blog .card-group h5 {
+main #blog .posts-medium .card, main #blog .posts-medium h5 {
   color: #222222;
   font-weight: bolder;
   font-style: italic;
 }
 
-main #blog .card-group h5 {
+main #blog .posts-medium .card-img {
+  max-height: 300px;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #blog .posts-medium .card-img img {
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+main #blog .posts-medium h5 {
   text-align: center;
 }
 

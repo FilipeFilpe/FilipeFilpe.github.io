@@ -4,8 +4,6 @@ const form = document.querySelector("form");
 btnLogin.addEventListener("click", (event) => {
     event.preventDefault();
 
-    console.log("clicked");
-
     const fields = [...document.querySelectorAll(".input-block input") ];
     fields.forEach(field => {
         if (field.value === "") form.classList.add("validate-error");     
@@ -18,6 +16,7 @@ btnLogin.addEventListener("click", (event) => {
         })
     } else {
         form.classList.add("form-hide");
+        form.submit();
     }
 
 });
