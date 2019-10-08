@@ -1,6 +1,18 @@
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/sw.js').then(function (registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful', registration);
+        }, function (err) {
+            // Registration failed
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+
 function getProjects() {
     fetch("../dados.json")
-        .then(res => { return res.json() } )
+        .then(res => res.json() )
         .then(data => {
             let html = '';
             let htmlModal = '';
@@ -70,20 +82,20 @@ function getPostsMedium() {
             let html = '';
             posts.forEach((item) => {
                 html += `
-                <div class="card" >
-                    <div class="card-img">
-                        <img src="${item.thumbnail}" class="card-img-top">
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">${item.title}</h5>
-                        <div class="blog__info">
-                            <small class="blog__author">${item.author}</small>
-                            <small class="blog__date">${shortenText(item.pubDate, 0, 10)}</small>
+                    <div class="card" >
+                        <div class="card-img">
+                            <img src="${item.thumbnail}" class="card-img-top">
                         </div>
-                        <p class="card-text">${shortenText(toText(item.content), 0, 300) + '...'}</p>
-                        <a href="${item.link}" class="btn btn-primary" target="_blanck">Leia mais...</a>
-                    </div>
-                </div>`
+                        <div class="card-body">
+                            <h5 class="card-title">${item.title}</h5>
+                            <div class="blog__info">
+                                <small class="blog__author">${item.author}</small>
+                                <small class="blog__date">${shortenText(item.pubDate, 0, 10)}</small>
+                            </div>
+                            <p class="card-text">${shortenText(toText(item.content), 0, 300) + '...'}</p>
+                            <a href="${item.link}" class="btn btn-primary" target="_blanck">Leia mais...</a>
+                        </div>
+                    </div>`;
             });
             document.querySelector('.posts-medium').innerHTML = html;
         })
