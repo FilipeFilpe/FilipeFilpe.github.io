@@ -1,0 +1,13 @@
+{
+  "name": "sitepessoa",
+  "version": "1.0.1",
+  "description": "Site pessoal para mostrar perfil, trabalhos, projetos, artigos e mais.",
+  "main": "index.js",
+  "repository": "https://github.com/FilipeFilpe/FilipeFilpe.github.io.git",
+  "author": "Filipe Sousa",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.6.2",
+    "@babel/core": "^7.6.2"
+  }
+}

@@ -200,6 +200,7 @@ main #portfolio .modal-dialog .modal-content .box-items div:first-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 500px;
 }
 
 main #portfolio .modal-dialog .modal-content .box-items div:first-child img {
@@ -289,6 +290,55 @@ main #blog .posts-medium .card-img img {
 
 main #blog .posts-medium h5 {
   text-align: center;
+}
+
+main #github-projects {
+  padding: 5% 0;
+  background: rgba(72, 77, 83, 0.7);
+}
+
+main #github-projects .projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+main #github-projects .projects .project {
+  background: #343a40;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 15px;
+  max-width: 500px;
+  min-width: 250px;
+}
+
+main #github-projects .projects .project .project-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+main #github-projects .projects .project .project-body h5.project-title {
+  text-align: center;
+  font-weight: bold;
+}
+
+main #github-projects .projects .project .project-body div a {
+  float: right;
 }
 
 footer {
