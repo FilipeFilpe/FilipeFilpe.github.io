@@ -27,27 +27,27 @@ function smoothScroll(){
 function getMenuItems() {
     document.querySelector('ul.navbar-nav').innerHTML = spinner;
     fetch('../dados.json')
-    .then(res => res.json())
-    .then(data => {
-        let menu = '';
-        data[0].menu.map((item, index) => {
-            // cria o menu
-            menu += `
-                <li class="nav-item ${index === 0 ? 'active': ''} ">
-                    <a class="nav-link" href="${item.link}">${item.nome} ${index === 0 ? '<span class="sr-only">(current)</span>': ''}</a>
-                </li>
-            `;
+        .then(res => res.json())
+        .then(data => {
+            let menu = '';
+            data[0].menu.map((item, index) => {
+                // cria o menu
+                menu += `
+                    <li class="nav-item ${index === 0 ? 'active': ''} ">
+                        <a class="nav-link" href="${item.link}">${item.nome} ${index === 0 ? '<span class="sr-only">(current)</span>': ''}</a>
+                    </li>
+                `;
 
-            // cria o mapa do site
-            let div = document.createElement('div');
-            let a = document.createElement('a');
-            a.href = item.link;
-            a.innerText = item.nome;
-            div.appendChild(a);
-            document.querySelector('.mapa-site div.items').appendChild(div);
+                // cria o mapa do site
+                let div = document.createElement('div');
+                let a = document.createElement('a');
+                a.href = item.link;
+                a.innerText = item.nome;
+                div.appendChild(a);
+                document.querySelector('.mapa-site div.items').appendChild(div);
+            });
+            document.querySelector('ul.navbar-nav').innerHTML = menu;
         });
-        document.querySelector('ul.navbar-nav').innerHTML = menu;
-    });
 }
 
 function getProjects() {
@@ -123,7 +123,6 @@ function getPostsMedium() {
             }
     
             let html = '';
-            console.log(posts);
             posts.forEach((item) => {
                 html += `
                     <div class="card" >
@@ -172,7 +171,9 @@ function getRepositoriesGithub() {
         .catch(err => console.error('Houve um erro no carregamento dos dados.', err));
 }
 
-smoothScroll();
+window.onload = function() {
+    smoothScroll();
+};
 getMenuItems();
 getProjects();
 getPostsMedium();
