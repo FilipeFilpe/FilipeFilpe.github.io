@@ -104,7 +104,7 @@ function getProjects() {
 }
 
 function getPostsMedium() {
-    document.querySelector('.posts-medium').innerHTML = spinner;    
+    document.querySelector('.posts-medium').innerHTML = spinner;
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@filipefilpe')
         .then((res) => res.json())
         .then((data) => {
@@ -123,6 +123,7 @@ function getPostsMedium() {
             }
     
             let html = '';
+            console.log(posts);
             posts.forEach((item) => {
                 html += `
                     <div class="card" >
