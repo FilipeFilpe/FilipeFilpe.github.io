@@ -17,6 +17,101 @@
   font-weight: bold;
 }
 
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 32px 32px;
+          transform-origin: 32px 32px;
+}
+
+.lds-heart div {
+  top: 23px;
+  left: 19px;
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  background: #cef;
+  -webkit-animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+          animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after, .lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 26px;
+  height: 26px;
+  background: #cef;
+}
+
+.lds-heart div:before {
+  left: -17px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -17px;
+  border-radius: 50% 50% 0 0;
+}
+
+@-webkit-keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
+@keyframes lds-heart {
+  0% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  5% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  39% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85);
+  }
+  45% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
 header {
   height: auto;
   background-color: #020202;
@@ -92,7 +187,6 @@ main #sobre {
 }
 
 main #sobre .container {
-  margin: 0 5%;
   text-align: justify;
 }
 
@@ -365,6 +459,40 @@ footer > div {
 footer > div:not(.redes-sociais) {
   color: #ffffff;
   min-width: 150px;
+}
+
+footer .mapa-site .items {
+  max-width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+footer .mapa-site .items > div {
+  margin: 5px;
+}
+
+footer .contato {
+  width: 250px;
+}
+
+footer .contato svg {
+  margin-left: 5px;
+}
+
+footer .contato .items > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .redes-sociais {

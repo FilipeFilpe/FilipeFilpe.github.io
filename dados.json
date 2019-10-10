@@ -50,6 +50,36 @@
                 "descricao": "Portal para o Departamento de Documentação da Secretaria de Ecoturismo do MMA. Feito no CMS Wordpress.",
                 "tecnologias": ["Wordpress", "HTML", "CSS", "JavascriptMysql"]
             }
+        ],
+        "menu": [
+            {
+                "nome": "Início",
+                "link": "#header"
+            },
+            {
+                "nome": "Projetos",
+                "link": "#portfolio"
+            },
+            {
+                "nome": "Blog",
+                "link": "#blog"
+            },
+            {
+                "nome": "Github",
+                "link": "#github-projects"
+            },
+            {
+                "nome": "Contato",
+                "link": "#contato"
+            },
+            {
+                "nome": "React",
+                "link": "reactBasic.html"
+            },
+            {
+                "nome": "Login",
+                "link": "login.html"
+            }
         ]
     }
 ]

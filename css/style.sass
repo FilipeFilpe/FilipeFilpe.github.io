@@ -16,7 +16,49 @@ $red: #ea4848
         color: lightgreen
         border-bottom: 1px solid green
         font-weight: bold
-
+// spinner
+.lds-heart
+    display: inline-block
+    position: relative
+    width: 64px
+    height: 64px
+    transform: rotate(45deg)
+    transform-origin: 32px 32px
+.lds-heart div 
+    top: 23px
+    left: 19px
+    position: absolute
+    width: 26px
+    height: 26px
+    background: #cef
+    animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1)
+.lds-heart div:after, .lds-heart div:before 
+    content: " "
+    position: absolute
+    display: block
+    width: 26px
+    height: 26px
+    background: #cef
+.lds-heart div:before
+    left: -17px;
+    border-radius: 50% 0 0 50%
+.lds-heart div:after 
+    top: -17px
+    border-radius: 50% 50% 0 0
+@keyframes lds-heart
+    0%
+        transform: scale(0.95)
+    5%
+        transform: scale(1.1)
+    39%
+        transform: scale(0.85)
+    45%
+        transform: scale(1)
+    60%
+        transform: scale(0.95)
+    100% 
+        transform: scale(0.9)
+  
 header 
     height: auto
     background-color: #020202
@@ -63,7 +105,7 @@ main
     #sobre
         background: #343a40
         .container 
-            margin: 0 5%
+            // margin: 0 5%
             text-align: justify
             h2
                 width: auto
@@ -202,6 +244,23 @@ footer
     > div:not(.redes-sociais)
         color: #ffffff
         min-width: 150px
+    .mapa-site
+        .items
+            max-width: 230px
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            > div
+                margin: 5px
+
+    .contato
+        width: 250px
+        svg
+            margin-left: 5px
+        .items > div
+            width: 100%
+            display: flex
+            justify-content: space-between
     .redes-sociais
         text-align: center
         display: flex

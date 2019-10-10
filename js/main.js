@@ -10,7 +10,48 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+let spinner = '<div class="lds-heart"><div></div></div>';
+
+function smoothScroll(){
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+    
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+}
+
+function getMenuItems() {
+    document.querySelector('ul.navbar-nav').innerHTML = spinner;
+    fetch('../dados.json')
+    .then(res => res.json())
+    .then(data => {
+        let menu = '';
+        data[0].menu.map((item, index) => {
+            // cria o menu
+            menu += `
+                <li class="nav-item ${index === 0 ? 'active': ''} ">
+                    <a class="nav-link" href="${item.link}">${item.nome} ${index === 0 ? '<span class="sr-only">(current)</span>': ''}</a>
+                </li>
+            `;
+
+            // cria o mapa do site
+            let div = document.createElement('div');
+            let a = document.createElement('a');
+            a.href = item.link;
+            a.innerText = item.nome;
+            div.appendChild(a);
+            document.querySelector('.mapa-site div.items').appendChild(div);
+        });
+        document.querySelector('ul.navbar-nav').innerHTML = menu;
+    });
+}
+
 function getProjects() {
+    document.querySelector('.modal-portfolio').innerHTML = spinner;
     fetch("../dados.json")
         .then(res => res.json() )
         .then(data => {
@@ -58,10 +99,12 @@ function getProjects() {
 
             document.querySelector('.itens-portfolio').innerHTML = html;
             document.querySelector('.modal-portfolio').innerHTML = htmlModal;
-        });
+        })
+        .catch(err => console.error('Houve um erro no carregamento dos dados.', err));
 }
 
 function getPostsMedium() {
+    document.querySelector('.posts-medium').innerHTML = spinner;    
     fetch('https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@filipefilpe')
         .then((res) => res.json())
         .then((data) => {
@@ -99,9 +142,11 @@ function getPostsMedium() {
             });
             document.querySelector('.posts-medium').innerHTML = html;
         })
+        .catch(err => console.error('Houve um erro no carregamento dos dados.', err));
 }
 
-function getRepositoriesGithub() {    
+function getRepositoriesGithub() {
+    document.querySelector('#github-projects div.projects').innerHTML = spinner;    
     fetch('https://api.github.com/users/FilipeFilpe/repos')
         .then(res => res.json())
         .then(data => {
@@ -122,9 +167,12 @@ function getRepositoriesGithub() {
             });
 
             document.querySelector('#github-projects div.projects').innerHTML = html;
-        });
+        })
+        .catch(err => console.error('Houve um erro no carregamento dos dados.', err));
 }
 
+smoothScroll();
+getMenuItems();
 getProjects();
 getPostsMedium();
 getRepositoriesGithub();
