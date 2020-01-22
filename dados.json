@@ -25,8 +25,8 @@
             {
                 "img": "img/portfolio/react-movie.png", 
                 "titulo": "React Movie",
-                "url": "http://a3p.mma.gov.br",
-                "descricao": "Portal para o Departamento de Documentação da Secretaria de Ecoturismo do MMA. Feito no CMS Wordpress.",
+                "url": "https://github.com/FilipeFilpe/appmoviewithreactjs",
+                "descricao": "Plataforma de filmes feita com React JS, consumindo uma API de filmes.",
                 "tecnologias": ["ReactJS", "HTML", "CSS", "Javascript"]
             },
             {
