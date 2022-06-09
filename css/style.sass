@@ -40,7 +40,7 @@ $red: #ea4848
     height: 26px
     background: #cef
 .lds-heart div:before
-    left: -17px;
+    left: -17px
     border-radius: 50% 0 0 50%
 .lds-heart div:after 
     top: -17px
@@ -120,9 +120,9 @@ main
                 h3
                     text-align: center
                 ul
-                    list-style: none;
-                    display: flex;
-                    flex-wrap: wrap;
+                    list-style: none
+                    display: flex
+                    flex-wrap: wrap
                     li
                         margin: 15px
             .img-fluid
@@ -176,9 +176,10 @@ main
         padding: 5% 0
         .posts-medium 
             display: flex
-            justify-content: center           
-            .card,
-                max-width: 350px
+            justify-content: center
+            flex-wrap: wrap
+            .card
+                max-width: 300px
                 padding: 15px
                 margin: 15px
                 flex: unset
@@ -188,6 +189,9 @@ main
                     align-items: center
                     justify-content: flex-end
                     flex: none
+                    .card-text
+                        overflow: hidden
+                        height: 150px
             .card, h5
                 color: #222222
                 font-weight: bolder

@@ -80,6 +80,21 @@
                 "nome": "Login",
                 "link": "login.html"
             }
+        ],
+        "habilidades": [
+            {"ordem": 1, "nome": "ReactJS"},
+            {"ordem": 2, "nome": "NextJS"},
+            {"ordem": 3, "nome": "JavaScript"},
+            {"ordem": 4, "nome": "NodeJS"},
+            {"ordem": 5, "nome": "Jest"},
+            {"ordem": 6, "nome": "React Testing Library"},
+            {"ordem": 7, "nome": "Express"},
+            {"ordem": 8, "nome": "PHP"},
+            {"ordem": 9, "nome": "Laravel"},
+            {"ordem": 10, "nome": "HTML"},
+            {"ordem": 11, "nome": "CSS"},
+            {"ordem": 12, "nome": "SASS"},
+            {"ordem": 13, "nome": "SQL"}
         ]
     }
 ]
