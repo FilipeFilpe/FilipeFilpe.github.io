@@ -77,10 +77,6 @@
                 "link": "/portfolio-web"
             },
             {
-                "nome": "Menu Teste",
-                "link": "/menu"
-            },
-            {
                 "nome": "Login",
                 "link": "login.html"
             }
